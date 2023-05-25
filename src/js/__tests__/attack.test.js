@@ -19,9 +19,9 @@ test('test attack. dmg = 100, cell = 2', () => {
 });
 
 test('test attack deamon. dmg = 100, cell = 2', () => {
-  magician.setAttack(100, 2);
+  daemon.setAttack(100, 2);
   const result = 90;
-  expect(result).toBe(magician.attack);
+  expect(result).toBe(daemon.attack);
 });
 
 test('test attack. dmg = 100, cell = 3', () => {
@@ -45,5 +45,11 @@ test('test attack. dmg = 100, cell = 5', () => {
 test('error attack cell > 5', () => {
   expect(() => {
     magician.setAttack(100, 6);
+  }).toThrow(Error);
+});
+
+test('error attack  < 0', () => {
+  expect(() => {
+    magician.setAttack(0, 1);
   }).toThrow(Error);
 });

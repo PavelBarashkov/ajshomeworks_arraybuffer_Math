@@ -1,7 +1,9 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable import/prefer-default-export */
 // eslint-disable-next-line import/prefer-default-export
-import Magician from './Magician';
+import Maths from './Maths';
 
-export default class Daemon extends Magician {
+class Daemon extends Maths {
 }
+
+export default Daemon;
