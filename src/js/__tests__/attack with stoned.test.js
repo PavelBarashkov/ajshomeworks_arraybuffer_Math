@@ -5,8 +5,10 @@ import Magician from '../Magician';
 const magician = new Magician();
 
 test('attack with stoned', () => {
-  magician.setAttack(100, 2);
+  magician.setCell(2);
+  magician.setAttack(100);
   magician.setStoned();
+  magician.getAttack();
   const result = 85;
-  expect(result).toBe(magician.attack);
+  expect(result).toBe(magician.getStoned());
 });
